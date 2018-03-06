@@ -8,12 +8,12 @@ This implementation is written in python as Blender addon to add this operator i
 - [Slides](https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/edit/master/README.md)
 
 # Video de presentación
-<iframe src="https://www.youtube.com/watch?v=clS97D_JxYQ" width="640" height="480"></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/clS97D_JxYQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # Instalación y ejemplo de uso
 A continuación se muestra como se debe instalar el addon y un ejemplo de su utilización.
 
-<iframe src="https://www.youtube.com/watch?v=LBJyFWKMSrs" width="640" height="480"></iframe>
+<iframe width="640" height="480" src="https://www.youtube.com/embed/LBJyFWKMSrs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # Reporte
 ## Detalles de implementación
@@ -50,7 +50,8 @@ En la siguiente figura podemos ver a la izquierda el resultado mostrado en el pa
 
 El paper indica tiempos de ejecucion de 2 segundos para un objeto con 3800 vertices y 3 minutos para un objeto con 134345 vertices sin embargo estos tiempos no pudieron ser verificados debido a que no se cuenta con el codigo del paper. El paper "Guided mesh normal filtering" proporciona una implementación cuyos tiempos son notoriamente diferentes, a continuación se presenta una tabla comparativa de los tiempos obtenidos en la implementacion de "Guided mesh normal filtering" vs el addon implementado para blender.
 
-| Modelo  | Vertices | Reimplementación | Addon |
+| Modelo  | Vertices | T ejecución      |T ejecución |
+|         |          | Reimplementación | Addon |
 | ------- | -------- |----------------- | ----- |
 | Fandisk |    6475  |       2:05       |  0:41 |
 | Iron    |   85574  |      43:21       | 10:41 |

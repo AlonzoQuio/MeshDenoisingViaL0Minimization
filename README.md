@@ -5,7 +5,7 @@ Scott Schaefer (Texas A&M University), this is an algorithm to remove the noise 
 This implementation is written in python as Blender addon to add this operator in the sculpt process or mesh denoising.
 
 # Recursos
-- [Slides](https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/edit/master/README.md)
+- [Slides](https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/blob/master/presentation/slides_MeshDenoisingViaL0Minimization.pdf)
 
 # Video de presentación
 <iframe width="640" height="480" src="https://www.youtube.com/embed/clS97D_JxYQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -36,6 +36,7 @@ Se utilizan los valores encontrados en la sección anterior para obtener el valo
 
 ### Resolver el valor de los vertices
 El último paso es resolver el sistema lineal para obtener el nuevo valor de los vértices, en este apartado fue donde se obtuvo una gran mejora en el tiempo ya que aquí se realizaba el cálculo de la matriz edge handle la cual ahora es precalculada.
+<p><img src="https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/blob/master/page/images/opencl.png?raw=true" alt=""></p>
 
 ## Limitaciones
 - No fue posible probar con todas las mallas presentadas en el articulo ya que no se tenia acceso a los objetos ni los parametros especificos que fueron utilizados.
@@ -56,6 +57,8 @@ El paper indica tiempos de ejecucion de 2 segundos para un objeto con 3800 verti
 | Iron    |   85574  |                      43:21       |            10:41 |
 
 # Resultados
+Para realizar las comparaciones se utilizaron los parámetros mostrados en la siguiente imagen, estos parametros fueron obtenidos del paper "Guided mesh normal filtering."
+<p><img src="https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/blob/master/page/images/parameters.png?raw=true" alt=""></p>
 A continuacion se muestran algunos ejemplos de ejecución del algoritmo.
 <iframe src="https://drive.google.com/file/d/16m7ARnW7VhpZ--DkFbnOdeNhWW53tpms/preview" width="320" height="240"></iframe>
 <iframe src="https://drive.google.com/file/d/1sIfbXYrvst5y2nK1ZBIrSZPBASXwS9bx/preview" width="320" height="240"></iframe>

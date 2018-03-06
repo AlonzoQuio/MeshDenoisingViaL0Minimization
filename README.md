@@ -8,11 +8,12 @@ This implementation is written in python as Blender addon to add this operator i
 - [Slides](https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/edit/master/README.md)
 
 # Video de presentación
-<iframe src="https://drive.google.com/file/d/1Nhz3uZ1Nvk8wwky-_0gewWPUt6_NKLyn/preview" width="640" height="480"></iframe>
+<iframe src="https://www.youtube.com/watch?v=clS97D_JxYQ" width="640" height="480"></iframe>
 
 # Instalación y ejemplo de uso
 A continuación se muestra como se debe instalar el addon y un ejemplo de su utilización.
-<iframe src="https://drive.google.com/file/d/1shnBk35uXhpGyJPSvvZ8GId3KPZQg2TY/preview" width="640" height="480"></iframe>
+
+<iframe src="https://www.youtube.com/watch?v=LBJyFWKMSrs" width="640" height="480"></iframe>
 
 # Reporte
 ## Detalles de implementación
@@ -21,7 +22,7 @@ En la siguiente imagen se puede apreciar el panel que permitira controlar los pa
 Este panel se encuentra en la sección de Propiedades > Object y cuenta con dos botones:
 - **Denoise:** Comienza el proceso de eliminación de ruido utilizando los parámetros seleccionados.
 - **Reload parámeters:** Reinicia los parámetros del addon.
-<img src="https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/blob/master/page/images/blender_addon.png?raw=true" alt="">
+<p><img src="https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/blob/master/page/images/blender_addon.png?raw=true" alt=""></p>
 
 ### Pre-calcular edge handle y edge handle vertex
 Luego de culminar la implementación del paper y obteniendo tiempos muy largos, se identificaron dos secciones que pueden ser optimizadas utilizando precalculo ya que en estas matrices se almacenaba la relación entre edges y vertices de dos caras opuestas y la relación entre vértices y la estructura anterior, debido a que estas relaciones no cambian aunque la posición de los vértices sea modificada se realizó un precálculo de estos valores utilizando la gpu para aumentar la velocidad obteniendo una reducción de 39 segundos aprox a 0.35 segundos para el caso puntual del objeto Fandisk el cual tiene 6475 vértices.
@@ -39,14 +40,13 @@ El último paso es resolver el sistema lineal para obtener el nuevo valor de los
 ## Limitaciones
 - No fue posible probar con todas las mallas presentadas en el articulo ya que no se tenia acceso a los objetos ni los parametros especificos que fueron utilizados.
 - Al no estar disponible el codigo del articulo no se lograron hacer comparaciones respecto al tiempo indicado y el tiempo obtenido en la re-implementación.
-- El paper indica que utiliza TAUCS: A library of sparse linear solvers (presentado por Sivan Toledo y Rotkin) para resolver el sistema esparso de ecuaciones.
+- El paper indica que utiliza TAUCS: A library of sparse linear solvers (presentado por Sivan Toledo y Rotkin) para resolver el sistema esparso de ecuaciones, en esta implementación se utilizara la libreria scipy de python.
 
 ## Comparaciones con los resultados mostrados en el artículo
-Se realizaron algunas pruebas de la ejecución del algoritmo, obteniendo los resultados mostrados en la tabla \ref{tab:test} donde se puede observar el tiempo empleado para realizar la eliminación de ruido de las diferentes mallas.
-
-Finalmente en la siguiente figura podemos ver a la izquierda el resultado mostrado en el paper para el objeto Fandisk y a la izquierda el resultado obtenido por la reimplementación en Blender, donde podemos apreciar que se lograron replicar los resultados presentados en el paper.
-
+En la siguiente figura podemos ver a la izquierda el resultado mostrado en el paper para el objeto Fandisk y a la izquierda el resultado obtenido por la reimplementación en Blender, donde podemos apreciar que se lograron replicar los resultados presentados en el paper.
+<center>
 <img src="https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/blob/master/page/images/result_compare.png?raw=true" alt="">
+</center>
 
 El paper indica tiempos de ejecucion de 2 segundos para un objeto con 3800 vertices y 3 minutos para un objeto con 134345 vertices sin embargo estos tiempos no pudieron ser verificados debido a que no se cuenta con el codigo del paper. El paper "Guided mesh normal filtering" proporciona una implementación cuyos tiempos son notoriamente diferentes, a continuación se presenta una tabla comparativa de los tiempos obtenidos en la implementacion de "Guided mesh normal filtering" vs el addon implementado para blender.
 
@@ -54,11 +54,6 @@ El paper indica tiempos de ejecucion de 2 segundos para un objeto con 3800 verti
 | ------- | -------- |----------------- | ----- |
 | Fandisk |    6475  |       2:05       |  0:41 |
 | Iron    |   85574  |      43:21       | 10:41 |
-
-
-## Discusion
-
-y todo lo que veas necesario para explicar y valorar tu trabajo.
 
 # Resultados
 A continuacion se muestran algunos ejemplos de ejecución del algoritmo.

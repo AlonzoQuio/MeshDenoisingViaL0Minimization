@@ -50,11 +50,10 @@ En la siguiente figura podemos ver a la izquierda el resultado mostrado en el pa
 
 El paper indica tiempos de ejecucion de 2 segundos para un objeto con 3800 vertices y 3 minutos para un objeto con 134345 vertices sin embargo estos tiempos no pudieron ser verificados debido a que no se cuenta con el codigo del paper. El paper "Guided mesh normal filtering" proporciona una implementación cuyos tiempos son notoriamente diferentes, a continuación se presenta una tabla comparativa de los tiempos obtenidos en la implementacion de "Guided mesh normal filtering" vs el addon implementado para blender.
 
-| Modelo  | Vertices | T ejecución      |T ejecución |
-|         |          | Reimplementación | Addon |
-| ------- | -------- |----------------- | ----- |
-| Fandisk |    6475  |       2:05       |  0:41 |
-| Iron    |   85574  |      43:21       | 10:41 |
+| Modelo  | Vertices | T ejecución Reimplementación     |T ejecución Addon |
+| ------- | -------- |--------------------------------- | ---------------- |
+| Fandisk |    6475  |                       2:05       |             0:41 |
+| Iron    |   85574  |                      43:21       |            10:41 |
 
 # Resultados
 A continuacion se muestran algunos ejemplos de ejecución del algoritmo.

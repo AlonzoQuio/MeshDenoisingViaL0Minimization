@@ -1,4 +1,4 @@
-# Mesh denoising via L0 Minimization
+# Implementación: Mesh denoising via L0 Minimization de Lei He y Scott Schaefer
 # Abstract
 This work is an implementation  of the paper Mesh denoising via L0 minimization proposed by Lei He (Texas A&M University) and 
 Scott Schaefer (Texas A&M University), this is an algorithm to remove the noise in triangulated models, this method maximize the flat regions and preserve sharp features.

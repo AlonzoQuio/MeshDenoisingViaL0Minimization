@@ -58,7 +58,7 @@ El paper indica tiempos de ejecucion de 2 segundos para un objeto con 3800 verti
 
 # Resultados
 Para realizar las comparaciones se utilizaron los parámetros mostrados en la siguiente imagen, estos parametros fueron obtenidos del paper "Guided mesh normal filtering."
-<p><img src="https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/blob/master/page/images/parameters.png?raw=true" alt=""></p>
+<center><img src="https://github.com/AlonzoQuio/MeshDenoisingViaL0Minimization/blob/master/page/images/parameters.png?raw=true" alt=""></center>
 A continuacion se muestran algunos ejemplos de ejecución del algoritmo.
 <iframe src="https://drive.google.com/file/d/16m7ARnW7VhpZ--DkFbnOdeNhWW53tpms/preview" width="320" height="240"></iframe>
 <iframe src="https://drive.google.com/file/d/1sIfbXYrvst5y2nK1ZBIrSZPBASXwS9bx/preview" width="320" height="240"></iframe>
